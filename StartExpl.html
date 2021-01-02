@@ -1,0 +1,114 @@
+<DOCTYPE! html>
+    <html lang="de-CH">
+        <head>
+            <meta charset="utf-8">
+            <title>Dynamic City Tramway Maping</title>
+            <link rel="stylesheet" href="DynTraNavigationStyles.css">
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+            <style>
+                a{
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <section class="TitleInclude">
+                <div class="TitleSection">
+                    <div class="TitleContent">
+                        <h1 style="font-family: 'Tangerine'; font-size: 90px;">Dynamic Tramway Mapping</h1>
+                        <div class="UnderTitle">
+                            <p class="UnderUnderTitle">Explanation and Introduction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="IconPlacement">
+                    <div class="vanish" id="OpenNavigation">
+                        <div style="align-self: center;" class="NavigIconOpen">
+                            <p style="min-width: 19px;"></p>
+                            <p>Navigation Listing :</p>
+                            <button style="max-width: 30px;
+                            min-width: 30px;
+                            max-height: 30px;
+                            min-height: 30px; margin-left: 85px;" class="icon-remove" id="ButtonClose"></button>
+                        </div>
+                        <div class="NavigationBase">
+                            <nav class="Navigation" id="Navbar">
+                                <ul>
+                                    <li class="NavigElem"><a href="Mapping.html" class="NavigPar">- Dynamic Map</a></li>
+                                    <li class="NavigElem"><a href="TimeTables.html" class="NavigPar">- Time Table</a></li>
+                                    <li class="NavigElem"><a href="Contact.html" class="NavigPar">- Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="prenav" id="ClosedNavigation">
+                        <div class="prenavTopbar">
+                            <p style="margin-left: 10px;"></p>
+                            <p>Open Navigation :</p>
+                            <button style="max-width: 30px;
+                            min-width: 30px;
+                            max-height: 30px;
+                            min-height: 30px; margin-left: 25px; margin-top: 10px;" class="icon-reorder" id="ButtonOpen"></button>
+                            <div style="margin-left: 10px; margin-right: 10px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Uk_tram_icon.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="MainFeed">
+                <div class="MainFeedTextSection">
+                    <p>
+                        <b style="line-height: 60px;">This Web-application has but one goal and one goal only: </b><br>
+                        To exemplify and introduce anyone who should be unfamiliar, <br>
+                        to the Tramway-system of Zürich. <br>
+                        Within the adjacent pages available through the navigation on your<br>
+                        top-left corner, you will find a dynamic tramway-map alongside the <br>
+                        current timetable of the Citys tramway-system. Last but not least <br>
+                        you may find a topological display of the area the footage for the <br>
+                        tramway-map was created in, as well as some information concerning <br>
+                        the authors of this project, should any questions arrise. <br>
+                    </p>
+                    <p>
+                        The dynamic mapping works in the following manner.<br>
+                        Vidoe footage is taken from the back of the tram making for an otherwise <br>
+                        unfamiliar experience, since most tramway participants tend to naturally <br>
+                        look ahead. Furthermore, the length of a full tramway railroad is quite large <br>
+                        and takes about 1 to 1.5 hours to complete from start to finish. <br>
+                        Since we imagine footage of such length - provided all one sees is scenery of Zürich, <br>
+                        is appealing to none, the decision was made to speed up the footage by a factor of 5<br> 
+                        This makes for a sort of zoom-out feeling while watching, almost like being draged<br>
+                        through and out of the city. What makes us call this dynamic mapping though? <br>
+                        Well, next to this footage, we display a logical map of the tramway-system harboring <br>
+                        a red dot, that is animated to wander along the course of the railway on which the tram <br>
+                        from which the footage was taken is currently positioned, so one can deduce the exact <br>
+                        geographical position of the scenery displayed at any given time.
+                    </p>
+                </div>
+            </section>
+<script>
+    var openNav = document.getElementById("OpenNavigation");
+    var closedNav = document.getElementById("ClosedNavigation");
+    let buttonOpen = document.getElementById("ButtonOpen");
+    let buttonClose = document.getElementById("ButtonClose");
+    buttonOpen.onclick = function(){
+        closedNav.classList.remove("prenav");
+        closedNav.classList.add("vanish");
+        openNav.classList.remove("vanish");
+        openNav.classList.add("NavigSection")
+    }
+    buttonClose.onclick = function(){
+        openNav.classList.remove("NavigSection");
+        openNav.classList.add("vanish");
+        closedNav.classList.remove("vanish");
+        closedNav.classList.add("prenav");
+    }
+
+</script>
+
+        </body>
+
+    </html>

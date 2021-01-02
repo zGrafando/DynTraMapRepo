@@ -1,0 +1,67 @@
+.MappingTitleSection{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.MapNavCascade{
+    max-width: 30%;
+    min-width: 30%;
+}
+
+.MapTitleContent{
+    max-width: 80%;
+    min-width: 80%;
+    float: center;
+    text-align: center;
+    top: 50%;
+    transform: translateY(50%);
+    min-height: 100px;
+    max-height: 100px;
+    margin-left: -40px;
+}
+
+.LineImg{
+    width: 300px;
+    height: 150px;
+    background-color: #FFFFFF;
+}
+
+.LineImgDiv{
+    position: absolute;
+    margin-top: -80px;
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg) translateZ(0);
+    -moz-transform: rotate(30deg) translateZ(0);
+    z-index: -1;
+    opacity: 70%;
+}
+
+.ButtonDiv{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    margin: 0
+}
+
+.ButtonElem{
+    margin-left: 40%; 
+    height: 50px;
+    width: 50px;
+}
+
+.ButtonTextWhite{
+    color: #FFFFFF;
+    font-size: 15px;
+    transform: translateY(50%);
+    margin-bottom: 50%;
+}
+
+.ButtonTextBlack{
+    color: #000000;
+    font-size: 15px;
+    transform: translateY(50%);
+    margin-bottom: 50%;
+}
